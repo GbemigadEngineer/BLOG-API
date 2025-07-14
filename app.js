@@ -1,9 +1,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const helmet = require("helmet");
-const xss = require("xss-clean");
 const cors = require("cors");
-
 
 // Importing local modules
 const articleRouter = require("./routes/articleRoutes.js");
@@ -32,8 +30,6 @@ app.use(morgan("dev"));
 // Middleware to set security headers
 app.use(helmet());
 
-// Middleware to prevent XSS attacks
-app.use(xss());
 
 // Middleware to enable CORS
 app.use(cors());
