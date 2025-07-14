@@ -3,7 +3,6 @@ const morgan = require("morgan");
 const helmet = require("helmet");
 const xss = require("xss-clean");
 const cors = require("cors");
-const rateLimit = require("express-rate-limit");
 const hpp = require("hpp");
 
 // Importing local modules
@@ -39,14 +38,6 @@ app.use(xss());
 // Middleware to enable CORS
 app.use(cors());
 
-// Middleware to limit the number of requests from a single IP
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // Limit each IP to 100 requests per windowMs
-});
-
-// Apply the rate limiting middleware to all requests
-app.use("/api/v1/myblog", limiter);
 
 // Middleware to prevent HTTP Parameter Pollution
 app.use(hpp());
