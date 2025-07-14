@@ -3,7 +3,7 @@ const morgan = require("morgan");
 const helmet = require("helmet");
 const xss = require("xss-clean");
 const cors = require("cors");
-const hpp = require("hpp");
+
 
 // Importing local modules
 const articleRouter = require("./routes/articleRoutes.js");
@@ -38,9 +38,6 @@ app.use(xss());
 // Middleware to enable CORS
 app.use(cors());
 
-
-// Middleware to prevent HTTP Parameter Pollution
-app.use(hpp());
 
 // Router middleware
 app.use("/api/v1/myblog", articleRouter);
