@@ -6,7 +6,7 @@ This is a simple yet powerful RESTful API built with **Node.js**, **Express**, a
 
 ## 🔗 Live Demo
 
-> _Optional: Add your deployed link here (e.g., Render, Railway, Vercel)_
+> _Coming soon
 
 ---
 
@@ -59,17 +59,22 @@ cd blog-api
 
 2. Install Dependencies
 
-npm install 3. Configure Environment Variables
+npm install 
+
+3. Configure Environment Variables
 Create a .env file in the root directory and copy the structure from the .env.example file:
 
 DATABASE=mongodb+srv://<username>:<password>@cluster.mongodb.net/blogDB?retryWrites=true&w=majority
-PORT=3000 4. Start the Server
+PORT=3000 
+
+4. Start the Server
 
 npm start
 The server will be running on:
 
 http://localhost:3000
-🧪 API Endpoints
+## 🧪 API Endpoints
+
 Base URL: /api/v1/myblog
 
 📖 Get All Articles
@@ -88,8 +93,9 @@ json
 {
 "title": "My First Post",
 "content": "This is the article content.",
-"author": "Sammy Dragone"
+"author": "Gbemiga Oduwole || Anonymous"
 }
+
 ✏️ Update an Article
 
 PATCH /api/v1/myblog/article/:id
@@ -101,6 +107,7 @@ DELETE /api/v1/myblog/article/:id
 Gbemiga Oduwole
 Backend Developer in Progress 🛠️
 📍 Nigeria
+Twitter: @Oluwagbemiga_7p || Email: oluwagbemigaoduwole@gmail.com
 
 ⭐️ Show Some Love
 If you found this helpful, please star the repository and share it with others.
